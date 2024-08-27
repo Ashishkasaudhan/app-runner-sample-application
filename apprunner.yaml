@@ -5,7 +5,7 @@ build:
     build:
      - pip3 install --no-cache-dir -r requirements.txt
 run:
-  command: python3 server.py
+  command: python3 app.py
   network:
     port: 8080  
 

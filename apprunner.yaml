@@ -2,8 +2,9 @@ version: 1.0
 runtime: python311
 build:
   commands: 
-    build: 
-     - pip3 install -r requirements.txt
+    build:
+      
+     - pip3 install --no-cache-dir -r requirements.txt
 run:
   command: python3 news.py
   network:

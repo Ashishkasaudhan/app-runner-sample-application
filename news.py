@@ -1,20 +1,26 @@
-from wsgiref.simple_server import make_server
-from pyramid.config import Configurator
-from pyramid.response import Response
-import os
+import requests
+from bs4 import BeautifulSoup
+from flask import Flask, render_template
 
-def hello_world(request):
-    name = os.environ.get('NAME')
-    if name == None or len(name) == 0:
-        name = "world"
-    message = "Hello, " + name + "!\n"
-    return Response(message)
+app = Flask(__name__)
+
+@app.route('/')
+def index():
+    # Fetch the news website
+    url = 'https://news.google.com'
+    response = requests.get(url)
+
+    # Parse the HTML content
+    soup = BeautifulSoup(response.content, 'html.parser')
+
+    # Find the news headlines
+    headlines = soup.find_all('a', class_='DY5T1d')
+
+    # Extract the text from the headlines
+    news_headlines = [headline.text for headline in headlines]
+
+    # Render the template with the news headlines
+    return render_template('index.html', headlines=news_headlines)
 
 if __name__ == '__main__':
-    port = int(os.environ.get("PORT"))
-    with Configurator() as config:
-        config.add_route('hello', '/')
-        config.add_view(hello_world, route_name='hello')
-        app = config.make_wsgi_app()
-    server = make_server('0.0.0.0', port, app)
-    server.serve_forever()
+    app.run(host='0.0.0.0', port=8080, debug=True)

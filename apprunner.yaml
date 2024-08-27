@@ -1,9 +1,12 @@
 version: 1.0
 runtime: python311
 build:
-  commands:
-    - pip install --no-cache-dir -r requirements.txt
+  commands: 
+    build:
+     - pip3 install --no-cache-dir -r requirements.txt
 run:
   command: python server.py
   network:
-    port: 8080
+    port: 8080  
+
+ 

@@ -3,10 +3,9 @@ runtime: python311
 build:
   commands: 
     build:
-      
      - pip3 install --no-cache-dir -r requirements.txt
 run:
-  command: python3 news.py
+  command: gunicorn -w 2 -b 0.0.0.0:8080 app:app
   network:
     port: 8080  
 

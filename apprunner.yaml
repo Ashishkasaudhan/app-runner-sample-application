@@ -3,5 +3,4 @@ runtime: python311
 build:
   commands: pip install -r requirements.txt
 run:
-  runtime-version: 3.11
   command: python news.py

@@ -1,24 +1,8 @@
-Here’s the updated `README.md` including the missing sections you mentioned:
+# AWS APP RUNNER 
 
-```markdown
 # Simple HTTP Server with AWS App Runner
 
 This is a sample Python application using `http.server` that serves the content of the current directory as a basic HTML page. The project is designed for deployment on AWS App Runner to simplify the process of hosting this application in the cloud.
-
-## Table of Contents
-
-- [Overview](#overview)
-- [Prerequisites](#prerequisites)
-- [Application Logic](#application-logic)
-- [Code Explanation](#code-explanation)
-- [Code Breakdown](#code-breakdown)
-- [AWS App Runner Configuration](#aws-app-runner-configuration)
-- [Key Parts of the Configuration](#key-parts-of-the-configuration)
-- [Steps to Deploy](#steps-to-deploy)
-- [Deploy on AWS App Runner](#deploy-on-aws-app-runner)
-- [Access the Application](#access-the-application)
-- [Requirements](#requirements)
-- [License](#license)
 
 ## Overview
 

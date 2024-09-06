@@ -149,8 +149,8 @@ touch requirements.txt
 If your project has dependencies, list them in `requirements.txt` like so:
 
 ```bash
-Flask==2.0.1
-requests==2.26.0
+flask
+gunicorn
 ```
 
 ## License
@@ -160,4 +160,4 @@ This project is licensed under the MIT License. See the `LICENSE` file for detai
 
 ---
 
-This version of the `README.md` includes detailed explanations for each of the sections, including the code breakdown, AWS App Runner configuration, and deployment steps. Let me know if there are further changes needed!
+This version of the `README.md` includes detailed explanations for each section, including the code breakdown, AWS App Runner configuration, and deployment steps. Please let me know if you need any more changes!

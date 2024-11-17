@@ -4,6 +4,7 @@
 
 This is a sample Python application using `http.server` that serves the content of the current directory as a basic HTML page. The project is designed for deployment on AWS App Runner to simplify the process of hosting this application in the cloud.
 
+......
 ## Overview
 
 This project demonstrates a simple Python web server that serves the contents of a directory (HTML files or other static files) over HTTP. It is designed to be deployed on AWS App Runner, making it a convenient way to run containerized applications with minimal setup.
